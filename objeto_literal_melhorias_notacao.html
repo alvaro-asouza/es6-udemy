@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        let nome = 'Jorge'
+        let idade = 29
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function(){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`);
+                
+            }
+        }
+
+        console.log(objeto);
+        objeto.exibirResumo()
+
+        let objeto2 = {
+            nome, //nome = nome variável / valor = valor da variável
+            idade,
+            sexo,
+            profissao,
+            exibirResumo(){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`);
+                
+            }
+        }
+
+        console.log(objeto2);
+        objeto2.exibirResumo()
+        
+        
+
+    </script>
+
+    <style>
+        /*
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            position: relative;
+        }
+
+        .nome {
+            width: 500px;
+        }
+
+        .profissao {
+            width: 500px;
+        }
+
+        .button{
+            display: flex;
+            position: absolute;
+            right: 50px;
+        }
+            */
+    </style>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <form action="" class="form">
+        <span>Nome: </span><input type="text" class="nome" id="nome"> <br> <br>
+        <span>Idade: </span><input type="number" class="numero" id="numero"> <span>Sexo: </span> <select name="sexo"
+            id="sexo">
+            <option value="#">---</option>
+            <option value="m">Masculino</option>
+            <option value="f">Feminino</option>
+        </select> <br> <br>
+        <span>Profissão: </span><input type="text" class="profissao" id="profissao"> <br><br>
+
+        <button type="button" class="btn" id="btn">Avançar</button>
+    </form>
+
+</body>
+
+</html>

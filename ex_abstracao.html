@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        
+        //modelo da entidade/objeto
+        class Sofa {
+            //cor
+            //qtd_lugares
+            //reclinavel
+            constructor(qtd_lugares, cor, reclinavel){
+                this.qtd_lugares = qtd_lugares
+                this.cor = cor
+                this.reclinavel = reclinavel
+            }
+
+            reclinarSofa(){
+                if(this.reclinavel === true){
+                    console.log('Retratil');
+                    
+                }else{
+                    console.log('Sofá não é retratil');
+                    
+                }
+            }
+        }
+
+        // let sofa = 
+        // sofa.reclinarSofa()
+
+        let sofas = Array()
+        sofas.push(new Sofa(4, 'amarelo', true))
+        sofas.push(new Sofa(5, 'verde', false))
+        console.log(sofas);
+        
+
+         
+
+    </script>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>
