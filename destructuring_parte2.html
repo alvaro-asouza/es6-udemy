@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        
+        let produto = {
+            descricao: 'Notebook',
+            preco: '1800',
+            detalhes: {
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+
+        // let { descricao: d, preco: p} = produto
+        let {detalhes:{fabricante, modelo}} = produto
+        console.log(fabricante, modelo);
+        
+
+
+    </script>
+
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
